@@ -8,7 +8,7 @@ ENV LC_ALL=C.UTF-8 \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update
-RUN apt-get install ffmpeg zip git -y
+RUN apt-get install ffmpeg zip git python3 -y
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
